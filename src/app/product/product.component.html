@@ -1,0 +1,14 @@
+<div class="container">
+    <table class="table table-striped table-responsive-md" *ngIf="products && products.length">
+        <thead>
+            <th> Product Name</th>
+            <th>Description</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of products">
+                <th>{{p.name}}</th>
+                <th><a [routerLink]="['product',p.id]">Go to product</a></th>
+            </tr>
+        </tbody>
+    </table>
+</div>
